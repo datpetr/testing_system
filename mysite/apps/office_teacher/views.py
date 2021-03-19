@@ -11,4 +11,7 @@ def index(request):
 
 
 def making_test(request):
-    return render(request, 'making_test/making_test.html')
+    data = {
+        'questions': [{'title': 'Как?'}, {'title': 'Где?'}, {'title': 'Когда?'}]
+    }
+    return render(request, 'making_test/making_test.html', data)
