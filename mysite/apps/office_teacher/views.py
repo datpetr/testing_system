@@ -3,7 +3,11 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request, 'office_teacher/office_teacher.html')
+    data = {
+        'teacher_name': 'Имя Фамилия',
+        'tests': [{'title': 'Матан', 'class': '10'}, {'title': 'Русич', 'class': '9'}]
+    }
+    return render(request, 'office_teacher/office_teacher.html', data)
 
 
 def making_test(request):
